@@ -144,6 +144,9 @@ function notifyRaw(options, callback) {
       noEscape: true
     });
 
+    // SW hack to use the long timeout
+    argsList.push("-d", "long");
+
     utils.fileCommand(
       localNotifier,
       argsList,
